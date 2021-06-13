@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import Recipes from "./Recipes";
 import './App.css';
 
+
 const App = () => {
 
-  const APP_ID = "32bc9f0a"
-  const APP_KEY = "00973904990f6f4873aeba5f3b11f036"
+  const APP_ID = process.env.REACT_APP_API_ID
+  const APP_KEY = process.env.REACT_APP_API_KEY
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
